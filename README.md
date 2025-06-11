@@ -1,7 +1,3 @@
-Awesome — let’s rework it into a clean, fresh, sophisticated **GitHub README.md** format while keeping that modern, artful tone. Here’s your polished version:
-
----
-
 # 🛋️ The Modern Furniture Museum
 
 **A new-age, immersive digital experience celebrating furniture as art, history, and cultural expression.**
@@ -43,7 +39,7 @@ This project was created as a conceptual digital museum experience for portfolio
 
 ## 🌐 Live Demo
 
-[View the Demo](#) *(Link placeholder — update when live)*
+https://github.com/cassiepacquin/aureum-gallery.git
 
 ## 📸 Preview
 
