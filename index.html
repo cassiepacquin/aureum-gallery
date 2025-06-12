@@ -4,7 +4,8 @@
         <link rel="stylesheet" href="aureumgallery.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Auruem Gallery</title>
+        <meta name="description" content="Aureum Gallery – a modern, luxury furniture museum showcasing curated collections and featured artists.">
+        <title>Aureum Gallery</title>
     </head>
     <body>
         <div class="container">
@@ -14,7 +15,7 @@
                         <li><a href="#home" class="home">Aureum Gallery</a></li>
                     </ul>
                     <ul>
-                        <li><a href="#menu" class="menu">Menu</a></li>
+                        <li><a href="#" class="menu">Menu</a></li>
                     </ul>
                 </div>
             </nav>
@@ -27,11 +28,11 @@
                 </div>
 
                 <div class="collection-title-container">
-                    <div class="collection-title">ELAYSION COLLECTION</div>
+                    <div class="collection-title" id="current-event">ELAYSION COLLECTION</div>
                     <div class="line"></div>
                 </div>
 
-                <div class="main-container" id="current-event">
+                <div class="main-container">
                     <div class="display-collection-title">
                         <div class="h2">THE<br>ELAYSION<br>COL.</div>
                     </div>
@@ -43,17 +44,17 @@
                     </div>
                 </div>
 
-                <div class=col-main-container>
-                    <div class=square-1>
+                <div class="col-main-container">
+                    <div class="square-1">
                         <img src="/images/Asset 12.png" alt="chair from museum gallery.">
                     </div>
-                    <div class=square-2>
+                    <div class="square-2">
                         <img src="/images/Asset 13.png" alt="chair from museum gallery.">
                     </div>
-                    <div class=square-3>
+                    <div class="square-3">
                         <img src="/images/Asset 16.png" alt="chair from museum gallery.">
                     </div>
-                    <div class="view-more"><a href="elaysion.html">View More</a></div>
+                    <div class="view-more" id="our-artists"><a href="elaysion.html">View More</a></div>
                 </div>
 
                 <div class="featured-container">
@@ -97,19 +98,16 @@
                 </div>
             </main>
             <footer>
-                <div class="black-line"></div>
+                <div class="black-line" id="contact"></div>
                 <div class="footer-container">
                     <div class="email-container">
                         <div class="small-line"></div>
                         <div class="email" id="menu"><a href="mailto:hello@aureumgallery.com">hello@aureumgallery.com</a></div>
                     </div>
                     <div class="footer-nav">
-                        <ul>
                             <li><a href="#home" class="home-nav">GALLERY</a></li>
                             <li><a href="#current-event" class="home-nav">CURRENT EVENT</a></li>
                             <li><a href="#our-artists" class="home-nav">OUR ARTISTS</a></li>
-                            <li><a href="about.html" class="home-nav">ABOUT US</a></li>
-                        </ul>
                     </div>
                     <div class="caption-nav">
                         Discover our meticulously curated works, where contemporary sophisticated meets timeless allure. From avant-garde master pieces to enduring classic, uncover the piece that speak to your legacy.
@@ -129,5 +127,50 @@
                 </div>
             </footer>
         </div>
+        <div class="fullscreen-menu" id="fullscreenMenu">
+            <div class="close-btn" id="closeBtn">&times;</div>
+            <ul>
+                <li><a href="#home" class="menu-link">GALLERY</a></li>
+                <li><a href="#current-event" class="menu-link">CURRENT EVENT</a></li>
+                <li><a href="#our-artists" class="menu-link">OUR ARTISTS</a></li>
+                <li><a href="#contact" class="menu-link">CONTACT</a></li>
+            </ul>
+        </div>        
+<script>
+        const menuButton = document.querySelector('.menu');
+const fullscreenMenu = document.getElementById('fullscreenMenu');
+const closeBtn = document.getElementById('closeBtn');
+const body = document.body;
+const menuLinks = document.querySelectorAll('.menu-link');
+
+// Open menu
+menuButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    fullscreenMenu.style.display = 'flex';
+    body.style.overflow = 'hidden';
+});
+
+// Close menu button
+closeBtn.addEventListener('click', () => {
+    fullscreenMenu.style.display = 'none';
+    body.style.overflow = '';
+});
+
+// Close menu on link click + smooth scroll
+menuLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        fullscreenMenu.style.display = 'none';
+        body.style.overflow = '';
+    });
+});
+</script>
     </body>
 </html>
