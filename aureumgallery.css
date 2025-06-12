@@ -65,7 +65,7 @@ header {
     font-size: 75px;
     font-weight: 900;
     letter-spacing: -3px;
-    line-height: 1;
+    line-height: 0.75;
     padding-top: 23%;
     display: flex;
     justify-content: center;
