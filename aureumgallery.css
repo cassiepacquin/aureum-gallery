@@ -64,8 +64,8 @@ header {
     font-family: Nimbus Sans, sans-serif;
     font-size: 75px;
     font-weight: 900;
-    letter-spacing: -3px;
-    line-height: 0.78;
+    letter-spacing: -5px;
+    line-height: 0.76;
     padding-top: 23%;
     display: flex;
     justify-content: center;
@@ -85,11 +85,10 @@ main {
     overflow: hidden;
     padding-top: 30px;
     padding-bottom: 50px;
-    transform: scaleX(-1);
 }
 
 .first-pic img {
-    width: 100%;
+    width: 135%;
     height: auto;
     object-fit: cover;
 }
@@ -123,9 +122,9 @@ main {
 }
 
 .h2 {
-    font-family: Nimbus Sans, sans-serif;
-    font-size: 50px;
-    line-height: 1;
+    font-family: Degular, sans-serif;
+    font-size: 60px;
+    line-height: 0.8;
     padding-top: 30px;
 }
 
@@ -437,6 +436,7 @@ footer {
     padding-left: 20px;
     font-weight: 100;
     letter-spacing: -2px;
+    line-height: 0.8;
 }
 
 .col-container {
@@ -445,6 +445,14 @@ footer {
     grid-template-rows: minmax(10px, min-content);
     gap: 5px;
     padding: 20px;
+}
+
+.description-elaysion {
+    font-family: Degular, sans-serif;
+    font-size: 16px;
+    width: 80%;
+    grid-column-end: span 2;
+    padding-bottom: 30px;
 }
 
 .grey-square-1, .grey-square-2, .grey-square-4, .grey-square-5, .grey-square-7, .grey-square-8 {
