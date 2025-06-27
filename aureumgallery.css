@@ -563,6 +563,98 @@ footer {
     overflow: hidden;
 }
 
+/* Product Page 1 */
+
+.h1-elaysion-product {
+    font-family: Nimbus Sans, sans-serif;
+    font-size: 70px;
+    padding-top: 30%;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    letter-spacing: -2px;
+    line-height: 0.8;
+    font-weight: 100;
+}
+
+.main-container-product-1 {
+    display: grid;
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(10px, min-content);
+}
+
+.grey-square-product-1-1, .grey-square-product-1-2, .grey-square-product-1-3, .grey-square-product-1-4, .grey-square-product-1-5, .grey-square-product-1-6, .grey-square-product-1-7, .grey-square-product-1-8 {
+    background-color: #e1e1e1;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grey-square-product-1-1 img {
+    width: 120%;
+    height: auto;
+    object-position: cover;
+}
+
+.grey-square-product-1-2 img {
+    width: 90%;
+    height: auto;
+    object-position: cover;
+}
+
+.grey-square-product-1-3 img {
+    width: 80%;
+    height: auto;
+    object-position: cover;
+}
+
+.grey-square-product-1-4 img {
+    width: 85%;
+    height: auto;
+    object-position: cover;
+}
+
+.grey-square-product-1-5 img {
+    width: 100%;
+    height: auto;
+    object-position: cover;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.values {
+    text-align: right;
+}
+
+.values, .labels {
+    font-family: Degular, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.add-to-cart {
+    font-family: Degular, sans-serif;
+    display: flex;
+    justify-self: flex-end;
+    padding-top: 20px;
+}
+
+.add-to-cart a {
+    color: black;
+    padding-bottom: 25px;
+}
+
+
+
 
 @media (prefers-reduced-motion: no-preference) {
     * {
