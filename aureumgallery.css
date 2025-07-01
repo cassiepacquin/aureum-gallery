@@ -5,6 +5,13 @@
     line-height: 1;
 }
 
+:root {
+    --main-font: 'Degular', sans-serif;
+    --secondary-font: 'Inter', sans-serif;
+    --font-size: 16px;
+    --text-color: black;
+}
+
 body {
     overflow-x: hidden;
 }
@@ -21,20 +28,17 @@ body {
 
 nav {
     grid-area: nav;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 999;
     padding: 10px;
     background-color: white;
-}
-
-.nav-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    padding: 15px;
+    padding: 20px 30px;
 }
 
 .main-nav ul {
@@ -42,9 +46,9 @@ nav {
 }
 
 .home, .menu {
-    color: black;
-    font-family: Degular, sans-serif;
-    font-size: 16px;
+    font-family: var(--main-font);
+    font-size: var(--font-size);
+    color: var(--text-color);
     display: flex;
 }
 
@@ -60,18 +64,17 @@ header {
     grid-area: header;
 }
 
-.h1 {
-    font-family: Nimbus Sans, sans-serif;
+h1 {
+    font-family: var(--secondary-font);
     font-size: 75px;
     font-weight: 900;
-    letter-spacing: -5px;
+    letter-spacing: -3px;
     line-height: 0.76;
-    padding-top: 23%;
+    padding-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    overflow: hidden;
 }
 
 main {
@@ -82,13 +85,11 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    padding-top: 30px;
-    padding-bottom: 50px;
+    padding: 30px 0 50px;
 }
 
 .first-pic img {
-    width: 135%;
+    width: 100%;
     height: auto;
     object-fit: cover;
 }
@@ -97,7 +98,8 @@ main {
     display: grid;
     padding: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(10px, min-content);
+    grid-template-rows: 200px 100px 100px;
+    align-items: end;
 }
 
 .collection-title-container {
@@ -107,38 +109,38 @@ main {
     
 }
 
+.section-header, .description, .SN-number {
+    align-self: end;
+}
+
 .collection-title {
-    font-family: Nimbus Sans, sans-serif;
-    font-size: 16px;
+    font-family: var(--secondary-font);
+    font-size: var(--font-size);
     margin-left: 20px;
     font-weight: 300;
 }
 
 .line {
     background-color: black;
-    width: 48%;
+    width: 44%;
     height: 1px;
-    margin-bottom: 5px;
 }
 
-.h2 {
-    font-family: Degular, sans-serif;
+.section-header {
+    font-family: var(--main-font);
     font-size: 60px;
     line-height: 0.8;
-    padding-top: 30px;
 }
 
 .description {
-    font-family: Degular, sans-serif;
-    font-size: 16px;
+    font-family: var(--main-font);
+    font-size: var(--font-size);
     width: 80%;
-    padding-top: 30%;
 }
 
 .SN-number {
-    font-family: Degular, sans-serif;
-    font-size: 16px;
-    padding-top: 20%;
+    font-family: var(--main-font);
+    font-size: var(--font-size);
 }
 
 .col-main-container {
@@ -186,16 +188,18 @@ main {
 }
 
 .view-more {
-    padding-top: 20px;
+    height: 30px;
+    display: flex;
+    align-items: end;
 }
 
 .view-more a {
-    color: black;
-    font-family: Degular, sans-serif;
-    font-size: 16px;
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-size: var(--font-size);
 }
 
-.featured-container {
+.featured-artists-container {
     display: grid;
     padding: 20px;
     grid-template-columns: 1fr;
@@ -204,7 +208,7 @@ main {
 }
 
 .featured-title {
-    font-family: Degular, sans-serif;
+    font-family: var(--main-font);
     font-size: 50px;
     line-height: 0.8;
 }
@@ -213,8 +217,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    padding-top: 10vh;
     background-color: #e1e1e1;
     width: 100%;
     height: 45vh;
@@ -224,14 +226,12 @@ main {
     width: 90%;
     height: auto;
     object-fit: cover;
-    margin-bottom: 90px;
 }
 
 .f-artist-pic-2, .f-artist-pic-3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     background-color: #e1e1e1;
     width: 100%;
     height: 45vh;
@@ -241,7 +241,6 @@ main {
     width: 100%;
     height: auto;
     object-fit: cover;
-    margin-bottom: 20px;
 }
 
 .f-artist-pic-2 img {
@@ -251,24 +250,23 @@ main {
 }
 
 .explore {
-    font-family: Nimbus Sans, sans-serif;
-    font-size: 16px;
-    font-weight: 100;
+    font-family: var(--secondary-font);
+    font-size: var(--font-size);
+    font-weight: 200;
 }
 
 .artist {
     font-size: 30px;
-    padding-top: 20px;
-    line-height: 0.3;
+    padding-top: 10px;
     font-weight: 300;
 }
 
 .aurm-container {
     display: grid;
     padding: 20px;
-    overflow: hidden;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(10px, min-content) 700px ;
+    grid-template-rows: auto 1fr;
+    height: 90vh;
 }
 
 .sub-title-container {
@@ -278,26 +276,26 @@ main {
 }
 
 .sub-title-1, .sub-title-2 {
-    font-family: Degular, sans-serif;
-    font-size: 16px;
+    font-family: var(--main-font);
+    font-size: var(--font-size);
 }
 
 .sub-title-2 {
-    justify-content: flex-end;
     text-align: right;
 }
 
 .display-aurm {
-    font-family: Nimbus Sans, sans-serif;
+    font-family: var(--secondary-font);
     font-size: 150px;
     font-weight: 800;
     letter-spacing: -10px;
     transform: rotate(90deg);
-    transform-origin: center center;
+    transform-origin: center;
     justify-self: center;
     align-self: center;
-    overflow: hidden;
+    text-align: center;
     padding: 20px;
+    overflow: hidden;
 }
 
 footer {
@@ -308,9 +306,9 @@ footer {
 .footer-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(10px, min-content);
+    grid-template-rows: auto 300px 180px auto 80px;
     padding: 20px;
-    font-family: Degular, sans-serif;
+    font-family: var(--main-font);
 }
 
 .black-line {
@@ -320,11 +318,11 @@ footer {
 }
 
 .email {
-    font-size: 16px;
+    font-size: var(--font-size);
 }
 
 .email a {
-    color: black;
+    color: var(--text-color);
     text-decoration: none;
 }
 
@@ -339,17 +337,15 @@ footer {
     display: flex;
     align-items: center;
     flex-direction: row;
-    padding-top: 20px; 
 }
 
 .footer-nav {
-    padding-top: 20%;
-    padding-bottom: 20%;
+    align-self: center;
 }
 
 .footer-nav a {
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
     font-size: 35px;
     line-height: 1.3;
     font-weight: 500;
@@ -360,31 +356,32 @@ footer {
 }
 
 .caption-nav {
-    font-size: 16px;
+    font-size: var(--font-size);
     line-height: 1.6;
 }
 
 .socials-container {
     display: flex;
     flex-direction: row;
-    padding-top: 15%;
 }
 
 .twitter, .insta, .facebook {
-    font-size: 16px;
+    font-size: var(--font-size);
     margin-right: 15px;
 }
 
 .twitter a, .insta a, .facebook a {
-    color: black;
+    color: var(--text-color);
     text-decoration: none;
 }
 
 .location {
     line-height: 1.3;
-    font-size: 16px;
-    padding-top: 10%;
+    font-size: var(--font-size);
+    align-self: end;
 }
+
+/* navigation menu*/
 
 .fullscreen-menu {
     display: none;
@@ -415,8 +412,8 @@ footer {
 .fullscreen-menu a {
     font-size: 30px;
     text-decoration: none;
-    color: black;
-    font-family: Degular, sans-serif;
+    color: var(--text-color);
+    font-family: var(--main-font);
 }
 
 .close-btn {
@@ -432,7 +429,7 @@ footer {
 .h1-elaysion {
     font-family: Nimbus Sans, sans-serif;
     font-size: 70px;
-    padding-top: 20%;
+    padding-top: 20px;
     padding-left: 20px;
     font-weight: 100;
     letter-spacing: -2px;
@@ -448,8 +445,8 @@ footer {
 }
 
 .description-elaysion {
-    font-family: Degular, sans-serif;
-    font-size: 16px;
+    font-family: var(--main-font);
+    font-size: var(--font-size);
     width: 80%;
     grid-column-end: span 2;
     padding-bottom: 30px;
@@ -491,24 +488,23 @@ footer {
     width: 100%;
     height: 90%;
     object-fit: cover;
-    overflow: hidden;
 }
 
 .grey-square-2 img{
-    width: 100%;
+    width: 90%;
     height: auto;
     object-fit: cover;
 }
 
 
 .grey-square-3 img {
-    width: 80%;
+    width: 70%;
     height: auto;
     object-fit: cover;
 }
 
 .grey-square-4 img {
-    width: 90%;
+    width: 80%;
     height: auto;
     object-fit: cover;
 }
@@ -517,7 +513,6 @@ footer {
     width: 100%;
     height: 90%;
     object-fit: cover;
-    overflow: hidden;
     padding-right: 20px;
 }
 
@@ -530,8 +525,8 @@ footer {
 }
 
 .showing-showing, .showing-date {
-    font-family: Degular, Sans-serif;
-    font-size: 16px;
+    font-family: var(--main-font);
+    font-size: var(--font-size);
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -549,18 +544,16 @@ footer {
 }
 
 .grey-square-7 img {
-    width: auto;
-    height: 115%;
+    width: 100%;
+    height: auto;
     object-fit: cover;
     margin-bottom: 30px;
-    overflow: hidden;
 }
 
 .grey-square-8 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    overflow: hidden;
 }
 
 /* Product Page 1 */
@@ -568,9 +561,7 @@ footer {
 .h1-elaysion-product {
     font-family: Nimbus Sans, sans-serif;
     font-size: 70px;
-    padding-top: 30%;
-    padding-left: 20px;
-    padding-bottom: 20px;
+    padding: 10px 0 10px 20px;
     letter-spacing: -2px;
     line-height: 0.8;
     font-weight: 100;
@@ -578,8 +569,7 @@ footer {
 
 .main-container-product-1 {
     display: grid;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 20px;
     grid-template-columns: 1fr;
     grid-template-rows: minmax(10px, min-content);
 }
@@ -594,34 +584,54 @@ footer {
 }
 
 .grey-square-product-1-1 img {
-    width: 120%;
+    width: 100%;
     height: auto;
-    object-position: cover;
+    object-fit: cover;
 }
 
 .grey-square-product-1-2 img {
     width: 90%;
     height: auto;
-    object-position: cover;
+    object-fit: cover;
 }
 
 .grey-square-product-1-3 img {
     width: 80%;
     height: auto;
-    object-position: cover;
+    object-fit: cover;
 }
 
 .grey-square-product-1-4 img {
     width: 85%;
     height: auto;
-    object-position: cover;
+    object-fit: cover;
 }
 
 .grey-square-product-1-5 img {
     width: 100%;
     height: auto;
-    object-position: cover;
+    object-fit: cover;
 }
+
+.grey-square-product-1-6 img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+}
+
+.grey-square-product-1-7 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 40px;
+}
+
+.grey-square-product-1-8 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 
 .product-details {
     display: flex;
@@ -635,21 +645,21 @@ footer {
 }
 
 .values, .labels {
-    font-family: Degular, sans-serif;
+    font-family: var(--main-font);
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
 .add-to-cart {
-    font-family: Degular, sans-serif;
+    font-family: var(--main-font);
     display: flex;
     justify-self: flex-end;
     padding-top: 20px;
 }
 
 .add-to-cart a {
-    color: black;
+    color: var(--text-color);
     padding-bottom: 25px;
 }
 
