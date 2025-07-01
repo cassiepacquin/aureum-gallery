@@ -6,7 +6,7 @@
 }
 
 :root {
-    --main-font: 'Degular', sans-serif;
+    --main-font: 'Montserrat', sans-serif;
     --secondary-font: 'Inter', sans-serif;
     --font-size: 16px;
     --text-color: black;
@@ -671,3 +671,10 @@ footer {
         scroll-behavior: smooth;
     }
 }
+
+@supports (font-variation-settings: "wght" 300) {
+    * {
+      font-family: Inter;
+      font-weight: 300;
+    }
+  }
