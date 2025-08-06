@@ -14,7 +14,7 @@
                         <li><a href="index.html#home" class="home">Aureum Gallery</a></li>
                     </ul>
                     <ul>
-                        <li><a href="#menu" class="menu">Menu</a></li>
+                        <li><a href="#" class="menu">Menu</a></li>
                     </ul>
             </nav>
             <header>
@@ -37,11 +37,28 @@
                         </div>
                     </div>
 
+                    <div class="furniture-text-1">
+                        <a href="Nova Accent Seat.html"><span class="Furniture-title">Nova Accent Seat</span>
+                        <span class="Furniture-price">2,035</span></a>
+                    </div>
+
+                    <div class="furniture-text-2">
+                        <a href="Cleo Club Chair.html"><span class="Furniture-title">Cleo Club Chair</span>
+                        <span class="Furniture-price">1,299</span></a>
+                    </div>
+
                     <div class="product-block wide">
                         <div class="grey-square-3">
                             <a href="Orin Curve Chair.html"><img src="/images/Asset 16.png" alt="velvet black chair"></a>
                         </div>
                     </div>
+
+                    <div class="furniture-text-3">
+                        <a href="Orin Curve Chair.html"><span class="Furniture-title">Orin Curve Chair</span>
+                        <span class="Furniture-price">4,033</span></a>
+                    </div>
+
+                    <div class="empty"></div>
 
                     <div class="product-block">
                         <div class="grey-square-4">
@@ -54,18 +71,29 @@
                             <a href="Elora Lounge Chair.html"><img src="/images/Asset 6.png" alt="black chair"></a>
                         </div>
                     </div>
-                    
-                        <div class="showing">
-                            <div class="showing-date">Made in 2025</div>
-                            <div class="showing-line"></div>
-                            <div class="showing-showing">First Showing</div>
-                        </div>
+
+                    <div class="furniture-text-4">
+                        <a href="Arise Chaise.html"><span class="Furniture-title">Aris Chaise</span>
+                        <span class="Furniture-price">5,510</span></a>
+                    </div>
+
+                    <div class="furniture-text-5">
+                        <a href="Elora Lounge Chair.html"><span class="Furniture-title">Elora Lounge Chair</span>
+                        <span class="Furniture-price">3,000</span></a>
+                    </div>
 
                     <div class="product-block wide">
                         <div class="grey-square-6">
                             <a href="Vega Recliner.html"><img src="/images/Asset 8.png" alt="velvet black chair"></a>
                         </div>
                     </div>
+
+                    <div class="furniture-text-6">
+                        <a href="Vega Recliner.html"><span class="Furniture-title">Vega Recliner</span>
+                        <span class="Furniture-price">3,045</span></a>
+                    </div>
+
+                    <div class="empty"></div>
 
                     <div class="product-block">
                         <div class="grey-square-7">
@@ -78,6 +106,17 @@
                             <a href="Solis Daybed.html"><img src="/images/Asset 9.png" alt="black chair"></a>
                         </div>
                     </div>
+
+                    <div class="furniture-text-7">
+                        <a href="Thale Minimal Lounger.html"><span class="Furniture-title">Thale Minimal Lounger</span>
+                        <span class="Furniture-price">4,000</span></a>
+                    </div>
+
+                    <div class="furniture-text-8">
+                        <a href="Solis Daybed.html"><span class="Furniture-title">Solis Daybed</span>
+                        <span class="Furniture-price">1,250</span></a>
+                    </div>
+                </div>
             </main>
             <footer>
                 <div class="black-line"></div>
@@ -155,7 +194,7 @@ menuLinks.forEach(link => {
                 targetElement.scrollIntoView({ behavior: 'smooth' });
             }
 
-            fullscreenMenu.classList.remove('show');
+            fullscreenMenu.style.display = 'none';
             body.style.overflow = '';
         }
         // If it's a normal link (like index.html#something) let it navigate
